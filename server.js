@@ -9,9 +9,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({
-    origin: 'https://polgo-landing-page.vercel.app' // Permita apenas seu domínio
-}));
+app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 
