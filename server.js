@@ -13,6 +13,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(cors());
+const response = await axios.get('/api/winners');
+
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB Connected'))
